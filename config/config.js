@@ -1,4 +1,4 @@
-require('dotenv').config();  // Ensure that environment variables are loaded from .env file
+require('dotenv').config();
 
 
 module.exports = {
@@ -7,11 +7,11 @@ module.exports = {
   database: process.env.DB_NAME || 'neondb',
   host: process.env.DB_HOST || 'ep-round-sea-a5wbvsyp.us-east-2.aws.neon.tech',
   port: process.env.DB_PORT || 5432,
-  dialect: 'postgres', // or another dialect like 'mysql', 'sqlite'
+  dialect: 'postgres',
   dialectOptions: {
     ssl: {
       require: true,
-      rejectUnauthorized: false  // Note: only use this for certain environments
+      rejectUnauthorized: false
      }
   },
    define: {
