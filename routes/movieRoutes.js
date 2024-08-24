@@ -3,6 +3,6 @@ const router = express.Router();
 const {listMovies} = require('../controllers/movieController');
 const { verifyToken } = require('../middlewares/authMiddleware');
 
-router.get('/listmovies', verifyToken, listMovies);
+router.get('/', verifyToken, listMovies);
 
 module.exports = router;
