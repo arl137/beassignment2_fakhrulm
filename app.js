@@ -13,7 +13,7 @@ app.use(express.json());
 
 app.use('/auth', authRoutes);
 app.use('/movies', movieRoutes);
-app.use('/', userRoutes); // Now correctly imported and defined
+app.use('/', userRoutes);
 
 sequelize.sync().then(() => {
   app.listen(process.env.PORT || 3000, () => {
